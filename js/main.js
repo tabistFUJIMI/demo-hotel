@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const inits = [];
   if (typeof NewsStore !== 'undefined' && NewsStore.init) inits.push(NewsStore.init());
   if (typeof RoomsStore !== 'undefined' && RoomsStore.init) inits.push(RoomsStore.init());
+  if (typeof PlansStore !== 'undefined' && PlansStore.init) inits.push(PlansStore.init());
   await Promise.all(inits);
 
   // --- Scroll Header ---
@@ -72,6 +73,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         </a>
       </li>`;
     }).join('');
+  }
+
+  // --- Dynamic Plans Preview (Top page: 3件) ---
+  const plansPreview = document.getElementById('plans-preview');
+  if (plansPreview && typeof PlansStore !== 'undefined') {
+    const plans = PlansStore.getPublished().slice(0, 3);
+    plansPreview.innerHTML = plans.map(p => `
+      <div class="plan-card reveal">
+        <div class="plan-card-img">
+          <img src="${p.image}" alt="${p.title}" loading="lazy">
+          <span class="plan-card-category">${p.category}</span>
+        </div>
+        <div class="plan-card-body">
+          <h3>${p.title}</h3>
+          <p>${p.description.slice(0, 60)}...</p>
+          <p class="plan-card-price">&yen;${p.price.toLocaleString()}<span>/お一人様</span></p>
+        </div>
+      </div>
+    `).join('');
+    reobserve(plansPreview);
   }
 
   // --- Dynamic Rooms List (Top page) ---
