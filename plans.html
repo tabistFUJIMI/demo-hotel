@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宿泊プラン | ふじみDXラボ温泉 ゆ縁の宿</title>
+  <meta name="description" content="ふじみDXラボ温泉 ゆ縁の宿の宿泊プラン。季節限定プラン、記念日プラン、ファミリープランなど。">
+  <link rel="canonical" href="https://example.com/plans.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/plans.html">
+  <meta property="og:title" content="宿泊プラン | ふじみDXラボ温泉 ゆ縁の宿">
+  <meta property="og:description" content="ふじみDXラボ温泉 ゆ縁の宿の宿泊プラン。季節限定プラン、記念日プランなどご紹介。">
+  <meta property="og:image" content="https://example.com/images/hero-bg.jpg">
+  <meta property="og:site_name" content="ふじみDXラボ温泉 ゆ縁の宿">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="宿泊プラン | ふじみDXラボ温泉 ゆ縁の宿">
+  <meta name="twitter:description" content="ふじみDXラボ温泉 ゆ縁の宿の宿泊プラン。">
+  <meta name="twitter:image" content="https://example.com/images/hero-bg.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://example.com/" },
+      { "@type": "ListItem", "position": 2, "name": "宿泊プラン", "item": "https://example.com/plans.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span>ゆ縁の宿</span>
+          <p class="logo-sub">FUJIMI DX LAB ONSEN</p>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="plans.html" class="active">宿泊プラン</a></li>
+          <li><a href="index.html#rooms">客室</a></li>
+          <li><a href="index.html#food">お料理</a></li>
+          <li><a href="index.html#access">アクセス</a></li>
+          <li><a href="index.html#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="header-tel">
+        <p class="tel-label">ご予約・お問い合わせ</p>
+        <p class="tel-number">0544-00-5555</p>
+        <p class="tel-hours">受付 9:00〜20:00</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-title-en" style="color:rgba(255,255,255,0.5);">Plans</p>
+      <h2>宿泊プラン</h2>
+    </div>
+  </section>
+
+  <section style="padding:60px 0;">
+    <div class="container">
+      <p class="section-desc">季節やシーンに合わせた、おすすめの宿泊プランをご用意しております。</p>
+      <div style="text-align:center;margin-bottom:32px;" id="plans-filter"></div>
+      <div class="content-grid" id="plans-page-grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <p class="footer-company">ふじみDXラボ温泉 ゆ縁の宿</p>
+          <p class="footer-address">〒418-0000 静岡県富士宮市△△温泉1-2-3</p>
+          <p class="footer-tel">TEL: 0544-00-5555</p>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li><a href="plans.html">宿泊プラン</a></li>
+            <li><a href="index.html#rooms">客室</a></li>
+            <li><a href="index.html#access">アクセス</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 ふじみDXラボ温泉 ゆ縁の宿 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-tel-float">
+    <a href="tel:0544005555" aria-label="電話する">電話で予約 0544-00-5555</a>
+  </div>
+
+  <style>
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .content-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .content-card-img {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .content-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-card-category {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--color-accent, #C19A6B);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .content-card-body {
+      padding: 20px;
+    }
+    .content-card-body h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .content-card-body p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .content-card-price {
+      margin-top: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-accent, #C19A6B);
+    }
+    .btn-filter {
+      background: none;
+      border: 2px solid var(--color-border, #ddd);
+      color: var(--color-text-light, #666);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0 4px 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-filter:hover, .btn-filter.active {
+      border-color: var(--color-accent, #C19A6B);
+      color: var(--color-accent, #C19A6B);
+      background: rgba(193,154,107,0.05);
+    }
+    @media (max-width: 600px) {
+      .content-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script src="js/plans-store.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await PlansStore.init();
+      const grid = document.getElementById('plans-page-grid');
+      const filterContainer = document.getElementById('plans-filter');
+      const allPlans = PlansStore.getPublished();
+
+      const categories = [...new Set(allPlans.map(p => p.category))];
+      filterContainer.innerHTML = '<button class="btn-filter active" data-filter="all">すべて</button>' +
+        categories.map(c => `<button class="btn-filter" data-filter="${c}">${c}</button>`).join('');
+
+      function render(filter) {
+        const items = filter === 'all' ? allPlans : allPlans.filter(p => p.category === filter);
+        grid.innerHTML = items.map(p => `
+          <div class="content-card">
+            <div class="content-card-img">
+              <img src="${p.image}" alt="${p.title}" loading="lazy">
+              <span class="content-card-category">${p.category}</span>
+            </div>
+            <div class="content-card-body">
+              <h3>${p.title}</h3>
+              <p>${p.description || ''}</p>
+              ${p.price ? `<p class="content-card-price">¥${Number(p.price).toLocaleString()}〜/人</p>` : ''}
+            </div>
+          </div>
+        `).join('');
+        if (items.length === 0) {
+          grid.innerHTML = '<p style="color:#999;text-align:center;padding:40px 0;">現在宿泊プランはありません。</p>';
+        }
+      }
+
+      render('all');
+
+      filterContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-filter')) {
+          filterContainer.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          render(e.target.dataset.filter);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
